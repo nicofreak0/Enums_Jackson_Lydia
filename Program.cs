@@ -1,4 +1,7 @@
-﻿namespace Enums_Jackson_Lydia
+﻿using System;
+using System.IO;
+
+namespace Enums_Jackson_Lydia
 {
     internal class Program
     {
@@ -25,6 +28,9 @@
             int myBirthYear = 2003;
 
             string myBirthDate = $"My Birthday is on {myBirthMonth}/{myBirthDay}/{myBirthYear}";
+
+            File.WriteAllText("myFile.txt", "This is My Text File!");
+            Console.WriteLine(File.ReadAllText("myFile.txt"));
         }
     }
 }
